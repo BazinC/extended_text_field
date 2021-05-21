@@ -2289,6 +2289,10 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   }
 
   @override
+  void userUpdateTextEditingValue(
+      TextEditingValue value, SelectionChangedCause cause) {}
+
+  @override
   void bringIntoView(TextPosition position) {
     if (supportSpecialText) {
       position = convertTextInputPostionToTextPainterPostion(
@@ -2329,7 +2333,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   }
 
   @override
-  void hideToolbar() {
+  void hideToolbar([bool hideHandles = true]) {
     _selectionOverlay?.hide();
   }
 
@@ -2570,6 +2574,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
 
     // Read only mode should not paint text composing.
     return widget.controller.buildTextSpan(
+      context: context,
       style: widget.style,
       withComposing: !widget.readOnly,
     );
