@@ -1473,7 +1473,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final AutofillGroupState? newAutofillGroup = AutofillGroup.of(context);
+    final AutofillGroupState? newAutofillGroup = AutofillGroup.maybeOf(context);
     if (currentAutofillScope != newAutofillGroup) {
       _currentAutofillScope?.unregister(autofillId);
       _currentAutofillScope = newAutofillGroup;
