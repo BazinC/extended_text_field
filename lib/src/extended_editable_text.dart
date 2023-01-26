@@ -2977,7 +2977,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
                       textDirection: _textDirection,
                       locale: widget.locale,
                       textHeightBehavior: widget.textHeightBehavior ??
-                          DefaultTextHeightBehavior.of(context),
+                          DefaultTextHeightBehavior.maybeOf(context),
                       textWidthBasis: widget.textWidthBasis,
                       obscuringCharacter: widget.obscuringCharacter,
                       obscureText: widget.obscureText,
