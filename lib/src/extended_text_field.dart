@@ -18,7 +18,6 @@ import 'package:flutter/services.dart';
 typedef InputCounterWidgetBuilder = Widget Function(
   /// The build context for the TextField
   BuildContext context, {
-
   /// The length of the string currently in the input.
   required int currentLength,
 
@@ -1400,8 +1399,8 @@ class ExtendedTextFieldState extends State<ExtendedTextField>
       semanticsMaxValueLength = null;
     }
 
-    return FocusTrapArea(
-      focusNode: focusNode,
+    return TapRegionSurface(
+      // focusNode: focusNode,
       child: MouseRegion(
         cursor: effectiveMouseCursor,
         onEnter: (PointerEnterEvent event) => _handleHover(true),

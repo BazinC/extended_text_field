@@ -3198,6 +3198,17 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
       _textInputConnection!.setSelectionRects(rects);
     }
   }
+
+  @override
+  void didChangeInputControl(
+      TextInputControl? oldControl, TextInputControl? newControl) {
+    // TODO: implement didChangeInputControl
+  }
+
+  @override
+  void performSelector(String selectorName) {
+    // TODO: implement performSelector
+  }
 }
 
 class _Editable extends MultiChildRenderObjectWidget {
