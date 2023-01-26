@@ -15,6 +15,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+dependency_overrides:
+  extended_text:
+    git:
+      url: https://github.com/LOCKEDFILE/extended_text
+      ref: 4f959740787a264a073ae6418e5d6aff743f4204
+
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
